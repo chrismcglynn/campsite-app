@@ -10,6 +10,7 @@ var express             = require("express"),
     User                = require("./models/user"),
     seedDB              = require("./seeds");
 
+// requiring routes
 var commentRoutes       = require("./routes/comments"),
     campgroundRoutes    = require("./routes/campgrounds"),
     indexRoutes         = require("./routes/index");
@@ -44,9 +45,7 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campground/:id/comments", commentRoutes);
        
 
-// app.listen(process.env.PORT, process.env.IP, function(){
-//     console.log("Server has started!");
-// });
+
 app.listen(3000, function () {
     console.log("Listening on port 3000!");
 });
